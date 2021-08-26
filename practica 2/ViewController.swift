@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var txtEdad: UITextField!
+    @IBOutlet weak var lblNombre: UILabel!
+    @IBOutlet weak var lblResultado: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        lblNombre.text = "Romina Verdugo"
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +24,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func doTapDecirEdad(_ sender: Any) {
+        lblResultado.text = "\(lblNombre.text!) tiene \(txtEdad.text!) years"
+    }
+    
 }
 
